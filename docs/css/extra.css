@@ -1,0 +1,15 @@
+/* For Material theme v9+ */
+.md-main__inner {
+    max-width: 80% !important;
+}
+
+.md-content__inner {
+    max-width: 80% !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+}
+
+/* Also try targeting body */
+body {
+    --md-content-max-width: 90%;
+}
