@@ -1,5 +1,4 @@
-site_name: My Docs
-site_url: https://sitename.example
+site_name: Патерни проектування
 theme:
   name: material
   font:
@@ -37,3 +36,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+nav:
+  - "Глава 1. SOLID":
+      - "Open/Closed principle" : chapter1/Open_Closed_Principle.md
