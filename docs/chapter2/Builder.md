@@ -1,42 +1,46 @@
-## Строитель (Builder) — шаблон проєктування
+## Будівельник (Builder) — шаблон проєктування
 
 **Builder** — це породжуючий шаблон, який інкапсулює створення складного об'єкта та дозволяє розділити процес побудови на етапи.
 
 ---
-
 ### 🛠 Коли варто використовувати:
 
 * Коли процес створення об'єкта **не повинен залежати** від частин, з яких він складається, і від способу їх поєднання.
 * Коли потрібно забезпечити **різні варіації** побудови об'єкта в рамках одного й того ж інтерфейсу.
 
 ---
-
 ### 📊 Формальна UML-структура:
 
 ```mermaid
 classDiagram
     class Product
     class Builder {
-        <<interface>>
+        <<abstract>>
         +BuildPartA()
         +BuildPartB()
+        +GetResult()
+        +Reset()
     }
     class ConcreteBuilder {
         +BuildPartA()
         +BuildPartB()
-        +GetResult()
+    }
+    class FancyBuilder {
+        +BuildPartA()
+        +BuildPartB()
     }
     class Director {
         +Construct(builder)
     }
 
     Builder <|-- ConcreteBuilder
+    Builder <|-- FancyBuilder
     Director --> Builder
     ConcreteBuilder --> Product
+    FancyBuilder --> Product
 ```
 
 ---
-
 ### 💻 Приклад на C#:
 
 ```csharp
@@ -48,24 +52,32 @@ class Product
 
 abstract class Builder
 {
+    protected Product product = new();
+
     public abstract void BuildPartA();
     public abstract void BuildPartB();
-    public abstract Product GetResult();
+
+    public virtual Product GetResult() => product;
+    public virtual void Reset() => product = new();
 }
 
 class ConcreteBuilder : Builder
 {
-    private readonly Product product = new();
-
     public override void BuildPartA() => product.Parts.Add("PartA");
     public override void BuildPartB() => product.Parts.Add("PartB");
-    public override Product GetResult() => product;
+}
+
+class FancyBuilder : Builder
+{
+    public override void BuildPartA() => product.Parts.Add("🌟 Шикарна частина A");
+    public override void BuildPartB() => product.Parts.Add("✨ Шикарна частина B");
 }
 
 class Director
 {
     public void Construct(Builder builder)
     {
+        builder.Reset();
         builder.BuildPartA();
         builder.BuildPartB();
     }
@@ -77,10 +89,14 @@ var builder = new ConcreteBuilder();
 director.Construct(builder);
 Product product = builder.GetResult();
 product.Show();
+
+var fancyBuilder = new FancyBuilder();
+director.Construct(fancyBuilder);
+Product fancyProduct = fancyBuilder.GetResult();
+fancyProduct.Show();
 ```
 
 ---
-
 ### 👥 Учасники патерна:
 
 * **Product** — представлення створюваного об’єкта. У прикладі: список частин.
@@ -89,7 +105,6 @@ product.Show();
 * **Director** — розпорядник, який керує порядком викликів методів Builder (опціонально).
 
 ---
-
 ### 🥗 Приклад застосування (будівництво салату):
 
 ```csharp
@@ -138,7 +153,6 @@ salad.Show();
 ```
 
 ---
-
 ### ✅ Переваги:
 
 * Гнучкість створення складних об’єктів.
@@ -153,7 +167,6 @@ salad.Show();
 > 🔸 **Director — не обов'язковий.** Його слід додавати лише у випадках, коли будівництво об’єкта повторюється або має фіксовану логіку.
 
 ---
-
 ### ❓ Чому використовують `abstract class Builder`, а не `interface`?
 
 * Абстрактний клас дозволяє **зберігати стан**, наприклад, створюваний об'єкт (`Product`).
@@ -163,3 +176,5 @@ salad.Show();
 * Інтерфейс — лише контракт. Абстрактний клас — це і контракт, і часткова реалізація.
 
 > 🔹 Якщо логіки в базовому класі немає, а лише контракт — тоді можна використовувати інтерфейс. Але у патерні Builder часто потрібен стан і логіка — тому абстрактний клас більш доречний.
+
+🔚 У підсумку, патерн Builder — це зручний спосіб створювати складні об’єкти крок за кроком, не перевантажуючи конструктори й не порушуючи принципів SOLID.
