@@ -6,6 +6,9 @@ theme:
     code: Roboto Mono
   logo: assets/logo.png
   favicon: assets/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky   # опційно: таби прилипають угорі
 
   palette:
     # Dark Mode
@@ -44,12 +47,13 @@ markdown_extensions:
               format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
+  - ООП:
+    - Класи та об’єкти: oop/type.md
+    - Наслідування: oop/inheritance.md
   - Патерни проєктування:
     - Глава 1. SOLID:
         - Open/Closed principle: patterns/chapter1/Open_Closed_Principle.md
     - Глава 2. Породжуючі патерни:
         - Будівельник (Builder): patterns/chapter2/Builder.md
-  - ООП:
-      - Класи та об’єкти: oop/type.md
-      - Наслідування: oop/inheritance.md
+  
 
