@@ -48,7 +48,10 @@ markdown_extensions:
 
 nav:
   - ООП:
-    - Класи та об’єкти: oop/type.md
+    - Основи програмування:
+      - Типи: 
+        - Визначення: oop/core/type.md
+        - Базові типи даних: oop/core/dataType.md
     - Наслідування: oop/inheritance.md
   - Патерни проєктування:
     - Глава 1. SOLID:
