@@ -116,8 +116,8 @@ fancyProduct.Show();
 
 ```csharp
 class Ingredient {
-    public string Name;
-    public string Amount;
+    public string Name { get; set; }
+    public string Amount { get; set; }
     public override string ToString() => $"{Amount} {Name}";
 }
 
