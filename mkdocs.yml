@@ -52,6 +52,7 @@ nav:
       - Типи: 
         - Визначення: oop/core/type.md
         - Базові типи даних: oop/core/dataType.md
+        - Члени типів: oop/core/members.md
     - Наслідування: oop/inheritance.md
   - Патерни проєктування:
     - Глава 1. SOLID:
