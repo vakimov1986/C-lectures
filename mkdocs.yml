@@ -53,7 +53,6 @@ nav:
         - Визначення: oop/core/type.md
         - Базові типи даних: oop/core/dataType.md
         - Члени типів: oop/core/members.md
-    - Наслідування: oop/inheritance.md
   - Патерни проєктування:
     - Глава 1. SOLID:
         - Open/Closed principle: patterns/chapter1/Open_Closed_Principle.md
