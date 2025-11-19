@@ -57,7 +57,6 @@ nav:
       - Вступ: oop/tests/introduction.md
       - Lasagna: oop/tests/lasagna.md
 
-
   - Патерни проєктування:
     - Глава 1. SOLID:
         - Open/Closed principle: patterns/chapter1/Open_Closed_Principle.md
