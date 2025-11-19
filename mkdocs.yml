@@ -53,6 +53,11 @@ nav:
         - Визначення: oop/core/type.md
         - Базові типи даних: oop/core/dataType.md
         - Члени типів: oop/core/members.md
+    - Тести:
+      - Вступ: oop/tests/introduction.md
+      - Lasagna: oop/tests/Lasagna.md
+
+
   - Патерни проєктування:
     - Глава 1. SOLID:
         - Open/Closed principle: patterns/chapter1/Open_Closed_Principle.md
