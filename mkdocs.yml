@@ -55,7 +55,7 @@ nav:
         - Члени типів: oop/core/members.md
     - Тести:
       - Вступ: oop/tests/introduction.md
-      - Lasagna: oop/tests/Lasagna.md
+      - Lasagna: oop/tests/lasagna.md
 
 
   - Патерни проєктування:
