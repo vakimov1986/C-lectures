@@ -49,9 +49,12 @@ markdown_extensions:
 nav:
   - ООП:
     - Основи програмування:
+      - Базові типи даних: 
+        - Базові типи даних: oop/core/BasicTypes/dataType.md
+        - int: oop/core/BasicTypes/int.md
+        - double: oop/core/BasicTypes/double.md
       - Типи: 
         - Визначення: oop/core/type.md
-        - Базові типи даних: oop/core/dataType.md
         - Члени типів: oop/core/members.md
     - Тести:
       - Вступ: oop/tests/introduction.md
