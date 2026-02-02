@@ -56,9 +56,6 @@ nav:
       - Типи: 
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
-    - Тести:
-      - Вступ: oop/tests/introduction.md
-      - Lasagna: oop/tests/lasagna.md
 
   - Патерни проєктування:
     - Глава 1. SOLID:
