@@ -1,0 +1,51 @@
+/* For Material theme v9+ */
+.md-main__inner {
+    max-width: 80% !important;
+}
+
+.md-content__inner {
+    max-width: 80% !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    padding-bottom: 4rem;
+}
+
+/* Also try targeting body */
+body {
+    --md-content-max-width: 90%;
+}
+
+/* Add a border and rounded corners to code blocks */
+.md-typeset pre {
+    border: 1px solid var(--md-code-border-color, #ccc); /* Use a predefined variable or a specific color */
+    border-radius: 0.25rem; /* Optional: for rounded edges */
+    padding: 0.2em; /* Optional: to ensure content isn't flush with the border */
+}
+
+/* Paragraphs */
+.md-typeset p {
+    margin: 0.3em 0 !important;
+}
+
+/* Headings (this is the BIG one) */
+.md-typeset h2 {
+    margin-top: 0.8em !important;
+    margin-bottom: 0.4em !important;
+}
+
+.md-typeset h3 {
+    margin-top: 0.6em !important;
+    margin-bottom: 0.3em !important;
+}
+
+/* Code blocks spacing */
+.md-typeset pre {
+    margin-top: 0.4em !important;
+    margin-bottom: 0.6em !important;
+}
+
+/* Horizontal rules */
+.md-typeset hr {
+    margin: 0.6em 0 !important;
+}
+
