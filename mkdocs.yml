@@ -57,6 +57,18 @@ nav:
         - string: oop/core/BasicTypes/string.md
         - char: oop/core/BasicTypes/char.md
         - bool: oop/core/BasicTypes/bool.md
+      - Операції з базовими типами:
+        - Числові операції:
+          - Арифметичні оператори: oop/core/BasicTypeOperations/Numeric/arithmetic-operators.md
+          - Порядок виконання операцій: oop/core/BasicTypeOperations/Numeric/operator-precedence.md
+          - Складені оператори присвоєння: oop/core/BasicTypeOperations/Numeric/compound-assignment.md
+          - Інкремент і декремент: oop/core/BasicTypeOperations/Numeric/increment-decrement.md
+        - Оператори порівняння: oop/core/BasicTypeOperations/comparison-operators.md
+        - Логічні операції: oop/core/BasicTypeOperations/logical-operations.md
+        - Операції з рядками:
+          - Конкатенація: oop/core/BasicTypeOperations/String/concatenation.md
+          - Інтерполяція: oop/core/BasicTypeOperations/String/interpolation.md
+          - Інші операції: oop/core/BasicTypeOperations/String/other-operations.md
       - Типи: 
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
