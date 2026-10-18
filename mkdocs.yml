@@ -53,6 +53,10 @@ nav:
         - Базові типи даних: oop/core/BasicTypes/dataType.md
         - int: oop/core/BasicTypes/int.md
         - double: oop/core/BasicTypes/double.md
+        - decimal: oop/core/BasicTypes/decimal.md
+        - string: oop/core/BasicTypes/string.md
+        - char: oop/core/BasicTypes/char.md
+        - bool: oop/core/BasicTypes/bool.md
       - Типи: 
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
