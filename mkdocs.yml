@@ -69,6 +69,20 @@ nav:
           - Конкатенація: oop/core/BasicTypeOperations/String/concatenation.md
           - Інтерполяція: oop/core/BasicTypeOperations/String/interpolation.md
           - Інші операції: oop/core/BasicTypeOperations/String/other-operations.md
+      - Керування потоком:
+        - Оператор if: oop/core/ControlFlow/if.md
+        - Оператор if-else: oop/core/ControlFlow/if-else.md
+        - Ланцюжок else if: oop/core/ControlFlow/else-if.md
+        - Оператор switch: oop/core/ControlFlow/switch.md
+        - Тернарний оператор: oop/core/ControlFlow/ternary-operator.md
+        - Ранній вихід із методу: oop/core/ControlFlow/early-return.md
+      - Цикли:
+        - Цикл while: oop/core/Loops/while.md
+        - Цикл do-while: oop/core/Loops/do-while.md
+        - Цикл for: oop/core/Loops/for.md
+        - Цикл foreach: oop/core/Loops/foreach.md
+        - Оператори break і continue: oop/core/Loops/break-continue.md
+        - Вкладені цикли: oop/core/Loops/nested-loops.md
       - Типи: 
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
