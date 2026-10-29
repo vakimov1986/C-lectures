@@ -56,3 +56,11 @@ Console.WriteLine(fullName);
 Console.WriteLine("Hello, " + fullName + "!");
 Console.WriteLine(fullName + " is " + age + " years old.");
 ```
+
+**Результат виконання:**
+
+```text {.execution-result}
+John Doe
+Hello, John Doe!
+John Doe is 30 years old.
+```

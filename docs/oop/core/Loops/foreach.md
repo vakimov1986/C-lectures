@@ -18,6 +18,14 @@ foreach (string name in names)
 }
 ```
 
+**Результат виконання:**
+
+```text {.execution-result}
+Alice
+Bob
+Charlie
+```
+
 ## `foreach` і `for`
 
 ```csharp
@@ -25,6 +33,14 @@ for (int i = 0; i < names.Length; i++)
 {
     Console.WriteLine(names[i]);
 }
+```
+
+**Результат виконання:**
+
+```text {.execution-result}
+Alice
+Bob
+Charlie
 ```
 
 `for` надає доступ до індексу. `foreach` зручніший, коли потрібно лише послідовно обробити всі елементи.

@@ -87,6 +87,24 @@ nav:
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
 
+  - WPF:
+    - Введення у WPF:
+      - Особливості WPF: wpf/introduction/index.md
+      - Перший застосунок: wpf/introduction/first-app.md
+      - Структура проєкту: wpf/introduction/project-structure.md
+      - Основи XAML: wpf/introduction/xaml.md
+      - XAML і C#: wpf/introduction/code-behind.md
+      - Складні властивості: wpf/introduction/xaml-properties.md
+    - Компонування:
+      - Основи компонування: wpf/layout/index.md
+      - Grid: wpf/layout/grid.md
+      - StackPanel: wpf/layout/stackpanel.md
+      - UniformGrid: wpf/layout/uniformgrid.md
+      - WrapPanel: wpf/layout/wrappanel.md
+      - DockPanel: wpf/layout/dockpanel.md
+      - Canvas: wpf/layout/canvas.md
+      - Властивості компонування: wpf/layout/properties.md
+
   - Патерни проєктування:
     - Глава 1. SOLID:
         - Open/Closed principle: patterns/chapter1/Open_Closed_Principle.md

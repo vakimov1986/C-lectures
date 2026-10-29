@@ -89,3 +89,13 @@ Console.WriteLine("Hello\tWorld");
 Console.WriteLine("C:\\Users\\Documents");
 Console.WriteLine("He said \"Hi\"");
 ```
+
+**Результат виконання:**
+
+```text {.execution-result}
+Line 1
+Line 2
+Hello	World
+C:\Users\Documents
+He said "Hi"
+```

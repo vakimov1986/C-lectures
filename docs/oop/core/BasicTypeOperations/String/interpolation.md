@@ -35,6 +35,14 @@ Console.WriteLine($"Price per item: ${price}");
 Console.WriteLine($"Total: ${total}");
 ```
 
+**Результат виконання:**
+
+```text {.execution-result}
+You bought 3 items
+Price per item: $9.99
+Total: $29.97
+```
+
 ---
 
 ## Вирази у фігурних дужках
@@ -49,6 +57,13 @@ Console.WriteLine($"Sum: {a + b}");     // Sum: 8
 Console.WriteLine($"Product: {a * b}"); // Product: 15
 ```
 
+**Результат виконання:**
+
+```text {.execution-result}
+Sum: 8
+Product: 15
+```
+
 ---
 
 ## Форматування значень
@@ -59,4 +74,10 @@ Console.WriteLine($"Product: {a * b}"); // Product: 15
 decimal balance = 1000.5m;
 Console.WriteLine($"Balance: ${balance:F2}");
 // Balance: $1000.50
+```
+
+**Результат виконання:**
+
+```text {.execution-result}
+Balance: $1000.50
 ```

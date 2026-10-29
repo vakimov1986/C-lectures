@@ -20,6 +20,12 @@ if (age >= 18)
 }
 ```
 
+**Результат виконання:**
+
+```text {.execution-result}
+Ви повнолітні
+```
+
 Якщо умова хибна, блок пропускається, а виконання продовжується після нього.
 
 ```csharp
@@ -31,6 +37,13 @@ if (temperature > 25)
 }
 
 Console.WriteLine("Перевірку завершено");
+```
+
+**Результат виконання:**
+
+```text {.execution-result}
+На вулиці спекотно
+Перевірку завершено
 ```
 
 Для складних умов можна використовувати [оператори порівняння](../BasicTypeOperations/comparison-operators.md) та [логічні оператори](../BasicTypeOperations/logical-operations.md).

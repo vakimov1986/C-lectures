@@ -1,18 +1,51 @@
-/* For Material theme v9+ */
-.md-main__inner {
-    max-width: 80% !important;
+/* Wider lesson workspace for Material theme v9+ */
+:root {
+    --lesson-content-width: 1200px;
+    --lesson-reading-width: 900px;
+    --lesson-navigation-gap: 2rem;
+}
+
+.md-content {
+    min-width: 0;
 }
 
 .md-content__inner {
-    max-width: 80% !important;
-    width: 80% !important;
-    margin: 0 auto !important;
+    width: 100%;
+    max-width: var(--lesson-content-width);
+    margin: 0;
     padding-bottom: 4rem;
 }
 
-/* Also try targeting body */
-body {
-    --md-content-max-width: 90%;
+@media screen and (min-width: 76.25em) {
+    .md-main__inner.md-grid {
+        max-width: calc(var(--lesson-content-width) + 24.2rem + var(--lesson-navigation-gap));
+    }
+
+    .md-content {
+        max-width: var(--lesson-content-width);
+        margin-left: var(--lesson-navigation-gap);
+    }
+}
+
+/* Keep prose comfortable while allowing tables and code to use the full area */
+.md-content__inner > :is(h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote) {
+    max-width: var(--lesson-reading-width);
+}
+
+.md-content__inner > .highlight,
+.md-content__inner > .md-typeset__scrollwrap {
+    width: 100%;
+    max-width: 100%;
+}
+
+.md-typeset__table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.md-typeset__table table {
+    min-width: 100%;
 }
 
 /* Add a border and rounded corners to code blocks */
@@ -47,5 +80,40 @@ body {
 /* Horizontal rules */
 .md-typeset hr {
     margin: 0.6em 0 !important;
+}
+
+/* Keep .NET type names readable inside tables */
+.md-typeset .type-name {
+    white-space: nowrap;
+}
+
+.md-typeset table:has(.type-name) th:nth-child(5),
+.md-typeset table:has(.type-name) td:nth-child(5) {
+    white-space: nowrap;
+}
+
+/* Execution result blocks */
+[data-md-color-scheme="default"] .md-typeset .execution-result pre {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #263746;
+    border-color: #40596D;
+}
+
+[data-md-color-scheme="default"] .md-typeset .execution-result code {
+    color: #EAF2F7;
+    background-color: transparent;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .execution-result pre {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    border-color: #D5D5D5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .execution-result code {
+    color: #202020;
+    background-color: transparent;
 }
 

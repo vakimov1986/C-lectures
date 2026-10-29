@@ -21,6 +21,14 @@ while (counter <= 3)
 }
 ```
 
+**Результат виконання:**
+
+```text {.execution-result}
+1
+2
+3
+```
+
 ## Лічба вниз
 
 ```csharp
@@ -31,6 +39,16 @@ while (counter > 0)
     Console.WriteLine(counter);
     counter--;
 }
+```
+
+**Результат виконання:**
+
+```text {.execution-result}
+5
+4
+3
+2
+1
 ```
 
 ## Нескінченний цикл
