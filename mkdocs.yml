@@ -1,6 +1,7 @@
 site_name: Патерни проектування
 theme:
   name: material
+  language: uk
   font:
     text: Merriweather Sans
     code: Roboto Mono
@@ -32,6 +33,8 @@ extra_css:
 
 
 markdown_extensions:
+  - toc:
+      toc_depth: 2
   - attr_list
   - md_in_html
   - pymdownx.highlight:
