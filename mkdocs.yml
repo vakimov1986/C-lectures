@@ -52,6 +52,8 @@ markdown_extensions:
 nav:
   - ООП:
     - Основи програмування:
+      - Консольне виведення: oop/core/console-output.md
+      - Консольне введення: oop/core/console-input.md
       - Базові типи даних: 
         - Базові типи даних: oop/core/BasicTypes/dataType.md
         - int: oop/core/BasicTypes/int.md

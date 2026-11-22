@@ -53,11 +53,19 @@ bool isClosed = !isOpen;
 
 ---
 
-## Приклад методу з результатом `bool`
+## Приклад операції І (`&&`)
 
 ```csharp
-public static bool CanGetDrivingLicense(int age)
-{
-    return age >= 18;
-}
+bool isAdult = true;
+bool hasLicense = true;
+
+bool canDrive = isAdult && hasLicense;
+
+Console.WriteLine(canDrive);
+```
+
+Результат:
+
+```text
+True
 ```
