@@ -15,100 +15,110 @@
 
 ```mermaid
 classDiagram
-    class Product
-    class Builder {
+    class House {
+        +Walls: string
+        +Roof: string
+        +Show()
+    }
+    class HouseBuilder {
         <<abstract>>
-        +BuildPartA()
-        +BuildPartB()
-        +GetResult()
+        #house: House
+        +BuildWalls()*
+        +BuildRoof()*
+        +GetResult() House
         +Reset()
     }
-    class ConcreteBuilder {
-        +BuildPartA()
-        +BuildPartB()
+    class WoodenHouseBuilder {
+        +BuildWalls()
+        +BuildRoof()
     }
-    class FancyBuilder {
-        +BuildPartA()
-        +BuildPartB()
+    class BrickHouseBuilder {
+        +BuildWalls()
+        +BuildRoof()
     }
     class Director {
         +Construct(builder)
     }
 
-    Builder <|-- ConcreteBuilder
-    Builder <|-- FancyBuilder
-    Director --> Builder
-    ConcreteBuilder --> Product
-    FancyBuilder --> Product
+    HouseBuilder <|-- WoodenHouseBuilder
+    HouseBuilder <|-- BrickHouseBuilder
+    Director --> HouseBuilder
+    HouseBuilder --> House
 ```
 
 ---
 
-### 💻 Приклад на C#:
+### 💻 Приклад на C# (будівництво будинку):
 
 ```csharp
-class Product
+class House
 {
-    public List<string> Parts = new();
-    public void Show() => Console.WriteLine(string.Join(", ", Parts));
+    public string Walls { get; set; } = "";
+    public string Roof { get; set; } = "";
+
+    public void Show() =>
+        Console.WriteLine($"Стіни: {Walls}, дах: {Roof}");
 }
 
-abstract class Builder
+abstract class HouseBuilder
 {
-    protected Product product = new();
+    protected House house = new();
 
-    public abstract void BuildPartA();
-    public abstract void BuildPartB();
+    public abstract void BuildWalls();
+    public abstract void BuildRoof();
 
-    public virtual Product GetResult() => product;
-    public virtual void Reset() => product = new();
+    public House GetResult() => house;
+    public void Reset() => house = new();
 }
 
-class ConcreteBuilder : Builder
+class WoodenHouseBuilder : HouseBuilder
 {
-    public override void BuildPartA() => product.Parts.Add("PartA");
-    public override void BuildPartB() => product.Parts.Add("PartB");
+    public override void BuildWalls() => house.Walls = "Дерев'яні";
+    public override void BuildRoof() => house.Roof = "Дерев'яний";
 }
 
-class FancyBuilder : Builder
+class BrickHouseBuilder : HouseBuilder
 {
-    public override void BuildPartA() => product.Parts.Add("🌟 Шикарна частина A");
-    public override void BuildPartB() => product.Parts.Add("✨ Шикарна частина B");
+    public override void BuildWalls() => house.Walls = "Цегляні";
+    public override void BuildRoof() => house.Roof = "Черепичний";
 }
 
 class Director
 {
-    public void Construct(Builder builder)
+    public void Construct(HouseBuilder builder)
     {
         builder.Reset();
-        builder.BuildPartA();
-        builder.BuildPartB();
+        builder.BuildWalls();
+        builder.BuildRoof();
     }
 }
 
 // Використання:
-var director = new Director();
-var builder = new ConcreteBuilder();
-director.Construct(builder);
-Product product = builder.GetResult();
-product.Show();
+Director director = new();
 
-var fancyBuilder = new FancyBuilder();
-director.Construct(fancyBuilder);
-Product fancyProduct = fancyBuilder.GetResult();
-fancyProduct.Show();
+HouseBuilder woodenBuilder = new WoodenHouseBuilder();
+director.Construct(woodenBuilder);
+House woodenHouse = woodenBuilder.GetResult();
+woodenHouse.Show();
+
+HouseBuilder brickBuilder = new BrickHouseBuilder();
+director.Construct(brickBuilder);
+House brickHouse = brickBuilder.GetResult();
+brickHouse.Show();
 ```
+
+Той самий `Director` виконує однакові етапи побудови, але конкретний будівельник визначає матеріали будинку. У цьому простому прикладі можна викликати методи будівельника напряму; `Director` показано як учасника класичної структури патерну.
 
 ---
 
 ### 👥 Учасники патерна:
 
-* **Product** — представлення створюваного об’єкта. У прикладі: список частин.
-* **Builder** — інтерфейс для створення частин об’єкта Product.
-* **ConcreteBuilder** — конкретна реалізація Builder, яка створює Product та надає до нього доступ.
-* **Director** — розпорядник, який керує порядком викликів методів Builder (опціонально).
+* **House (Product)** — об'єкт, який створюється: будинок зі стінами та дахом.
+* **HouseBuilder (Builder)** — абстрактний клас, що визначає етапи побудови та зберігає створюваний будинок.
+* **WoodenHouseBuilder і BrickHouseBuilder (Concrete Builders)** — реалізації етапів для будинків із різних матеріалів.
+* **Director** — визначає порядок виклику етапів побудови (необов'язковий учасник).
 
-> 🔸 **Director — не обов'язковий.** Його слід додавати лише у випадках, коли будівництво об’єкта повторюється або має фіксовану логіку.
+> 🔸 **Director — не обов'язковий.** Він виправданий, коли порядок або сценарії побудови потрібно використовувати повторно.
 
 ---
 
