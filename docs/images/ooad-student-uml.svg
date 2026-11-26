@@ -1,17 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="294" viewBox="0 0 680 294">
-<rect width="680" height="294" fill="white"/>
-<g fill="none" stroke="#202020" stroke-width="1.5">
-<rect x="14" y="14" width="652" height="268"/>
-<line x1="14" y1="51" x2="666" y2="51"/>
-<line x1="14" y1="130" x2="666" y2="130"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="260" viewBox="0 0 740 260" role="img" aria-label="C# UML class Student with properties and update methods">
+<rect width="740" height="260" fill="white"/>
+<g fill="none" stroke="#202020" stroke-width="1.6">
+<rect x="16" y="14" width="708" height="232"/>
+<line x1="16" y1="51" x2="724" y2="51"/>
+<line x1="16" y1="133" x2="724" y2="133"/>
 </g>
 <g font-family="Arial, sans-serif" font-size="22" fill="#111">
-<text x="26" y="40" font-weight="bold">Student</text>
-<text x="26" y="82">-gpa: float</text>
-<text x="26" y="113">-degreeProgram: String</text>
-<text x="26" y="160">+getGPA(): float</text>
-<text x="26" y="191">+setGPA( float )</text>
-<text x="26" y="222">+getDegreeProgram(): String</text>
-<text x="26" y="253">+setDegreeProgram( String )</text>
+<text x="30" y="41" font-weight="bold">Student</text>
+<text x="30" y="85">+Gpa: double</text>
+<text x="30" y="118">+DegreeProgram: string</text>
+<text x="30" y="163">+UpdateGpa(gpa: double): void</text>
+<text x="30" y="198">+UpdateDegreeProgram(program: string): void</text>
 </g>
 </svg>
