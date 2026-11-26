@@ -92,6 +92,15 @@ nav:
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
 
+  - Конструювання ПЗ:
+    - Огляд дисципліни: construction/index.md
+    - Тема 1. Основи конструювання та проєктування ПЗ: construction/topic-01-foundations.md
+    - Тема 2. Вимоги до програмного забезпечення: construction/topic-02-requirements.md
+    - Тема 3. Декомпозиція програмної системи: construction/topic-03-decomposition.md
+    - Тема 4. Об’єктне моделювання та UML: construction/topic-04-uml.md
+    - Тема 5. Принципи SOLID: construction/topic-05-solid.md
+    - Тема 6. Якість коду та рефакторинг: construction/topic-06-code-quality.md
+
   - WPF:
     - Введення у WPF:
       - Особливості WPF: wpf/introduction/index.md
