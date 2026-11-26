@@ -43,7 +43,7 @@ CRC-картка описує їх разом. Але під час створе
 Назва: Тип
 ```
 
-Наприклад, **`Price: double`** означає властивість `Price` типу `double`. Знак `+` позначає **публічний доступ**.
+Наприклад, **`Price: decimal`** означає властивість `Price` типу `decimal`. Знак `+` позначає **публічний доступ**.
 
 Для операції використовують форму:
 
@@ -53,7 +53,7 @@ CRC-картка описує їх разом. Але під час створе
 
 Наприклад, **`IsOnSale(date: DateTime): bool`** описує метод, що приймає дату й повертає логічне значення `true` або `false`.
 
-У C# назви класів, властивостей і методів зазвичай записують у стилі **PascalCase**, а параметри — у стилі **camelCase**. Тому при адаптації використано `GroceryId`, `ExpiryDate` та `IsOnSale` замість іншого написання ідентифікаторів.
+У C# назви класів, властивостей і методів зазвичай записують у стилі **PascalCase**, а параметри — у стилі **camelCase**. Для ціни використано тип **`decimal`**, який підходить для грошових обчислень. Тому при адаптації використано `GroceryId`, `ExpiryDate` та `IsOnSale` замість іншого написання ідентифікаторів.
 
 ### Перехід від UML до C#
 
@@ -66,7 +66,7 @@ public class Food
     public string Name { get; set; } = string.Empty;
     public string Manufacturer { get; set; } = string.Empty;
     public DateTime ExpiryDate { get; set; }
-    public double Price { get; set; }
+    public decimal Price { get; set; }
 
     public bool IsOnSale(DateTime date)
     {
