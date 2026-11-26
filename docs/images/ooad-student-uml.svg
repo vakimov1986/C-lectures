@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="294" viewBox="0 0 680 294">
+<rect width="680" height="294" fill="white"/>
+<g fill="none" stroke="#202020" stroke-width="1.5">
+<rect x="14" y="14" width="652" height="268"/>
+<line x1="14" y1="51" x2="666" y2="51"/>
+<line x1="14" y1="130" x2="666" y2="130"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="22" fill="#111">
+<text x="26" y="40" font-weight="bold">Student</text>
+<text x="26" y="82">-gpa: float</text>
+<text x="26" y="113">-degreeProgram: String</text>
+<text x="26" y="160">+getGPA(): float</text>
+<text x="26" y="191">+setGPA( float )</text>
+<text x="26" y="222">+getDegreeProgram(): String</text>
+<text x="26" y="253">+setDegreeProgram( String )</text>
+</g>
+</svg>
