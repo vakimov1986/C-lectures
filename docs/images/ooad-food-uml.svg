@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="240" viewBox="0 0 660 240">
+<rect width="660" height="240" fill="white"/>
+<g fill="none" stroke="#202020" stroke-width="1.5">
+<rect x="14" y="14" width="632" height="210"/>
+<line x1="14" y1="48" x2="646" y2="48"/>
+<line x1="14" y1="192" x2="646" y2="192"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="22" fill="#111">
+<text x="26" y="39" font-weight="bold">Food</text>
+<text x="26" y="75">groceryID: String</text>
+<text x="26" y="102">name: String</text>
+<text x="26" y="129">manufacturer: String</text>
+<text x="26" y="156">expiryDate: Date</text>
+<text x="26" y="183">price: double</text>
+<text x="26" y="217">isOnSale(): boolean</text>
+</g>
+</svg>
