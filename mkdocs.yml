@@ -94,6 +94,12 @@ nav:
 
   - Конструювання ПЗ:
     - Огляд дисципліни: construction/index.md
+    - Матеріали перших п’яти лекцій (за PDF):
+      - 1. Об’єктно-орієнтоване мислення: construction/lectures/lecture-01-object-thinking.md
+      - 2. Функціональні та нефункціональні вимоги: construction/lectures/lecture-02-requirements.md
+      - 3. Основи проєктування ПЗ: construction/lectures/lecture-03-design.md
+      - 4. Абстракція, інкапсуляція та декомпозиція: construction/lectures/lecture-04-design-principles.md
+      - 5. UML, узагальнення та приховування інформації: construction/lectures/lecture-05-uml-information-hiding.md
     - Тема 1. Основи конструювання та проєктування ПЗ: construction/topic-01-foundations.md
     - Тема 2. Вимоги до програмного забезпечення: construction/topic-02-requirements.md
     - Тема 3. Декомпозиція програмної системи: construction/topic-03-decomposition.md
