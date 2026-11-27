@@ -91,6 +91,7 @@ nav:
       - Типи: 
         - Визначення: oop/core/type.md
         - Члени типів: oop/core/members.md
+        - Від класу до об'єкта: oop/core/from-class-to-object.md
 
   - Конструювання ПЗ:
     - Вступ: construction/index.md
