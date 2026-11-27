@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="260" viewBox="0 0 740 260" role="img" aria-label="C# UML class Student with properties and update methods">
+<rect width="740" height="260" fill="white"/>
+<g fill="none" stroke="#202020" stroke-width="1.6">
+<rect x="16" y="14" width="708" height="232"/>
+<line x1="16" y1="51" x2="724" y2="51"/>
+<line x1="16" y1="133" x2="724" y2="133"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="22" fill="#111">
+<text x="30" y="41" font-weight="bold">Student</text>
+<text x="30" y="85">+Gpa: double</text>
+<text x="30" y="118">+DegreeProgram: string</text>
+<text x="30" y="163">+UpdateGpa(gpa: double): void</text>
+<text x="30" y="198">+UpdateDegreeProgram(program: string): void</text>
+</g>
+</svg>

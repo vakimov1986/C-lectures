@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="288" viewBox="0 0 740 288" role="img" aria-label="C# UML class Food with properties and IsOnSale method">
+<rect width="740" height="288" fill="white"/>
+<g fill="none" stroke="#202020" stroke-width="1.6">
+<rect x="16" y="14" width="708" height="256"/>
+<line x1="16" y1="51" x2="724" y2="51"/>
+<line x1="16" y1="231" x2="724" y2="231"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="23" fill="#111">
+<text x="30" y="42" font-weight="bold">Food</text>
+<text x="30" y="81">+GroceryId: string</text>
+<text x="30" y="111">+Name: string</text>
+<text x="30" y="141">+Manufacturer: string</text>
+<text x="30" y="171">+ExpiryDate: DateTime</text>
+<text x="30" y="201">+Price: decimal</text>
+<text x="30" y="260">+IsOnSale(date: DateTime): bool</text>
+</g>
+</svg>

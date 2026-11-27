@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="432" viewBox="0 0 720 432" role="img" aria-label="UML C# inheritance Animal Lion">
+<rect width="720" height="432" fill="white"/>
+<g stroke="#202020" stroke-width="2" fill="none">
+<rect x="167" y="16" width="386" height="265"/>
+<line x1="167" y1="57" x2="553" y2="57"/>
+<line x1="167" y1="168" x2="553" y2="168"/>
+<path d="M360 342 L360 307"/><path d="M360 281 L345 308 L375 308 Z" fill="white"/>
+<rect x="167" y="342" width="386" height="75"/>
+<line x1="167" y1="380" x2="553" y2="380"/>
+</g>
+<g font-family="Arial, sans-serif" font-size="21" fill="#111">
+<text x="322" y="44" font-weight="bold">Animal</text>
+<text x="181" y="90">#NumberOfLegs: int</text>
+<text x="181" y="121">#NumberOfTails: int</text>
+<text x="181" y="152">#Name: string</text>
+<text x="181" y="205">+Walk(): void</text>
+<text x="181" y="237">+Run(): void</text>
+<text x="181" y="269">+Eat(): void</text>
+<text x="337" y="371" font-weight="bold">Lion</text>
+<text x="181" y="407">+Roar(): void</text>
+</g>
+</svg>
